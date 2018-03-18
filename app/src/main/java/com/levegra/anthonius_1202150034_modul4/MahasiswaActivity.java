@@ -2,6 +2,7 @@ package com.levegra.anthonius_1202150034_modul4;
 
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.pm.ActivityInfo;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,6 +19,9 @@ public class MahasiswaActivity extends AppCompatActivity {
     Button fetch_data;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mahasiswa);
         fetch_mahasiswa = (ListView) findViewById(R.id.fetch_mahasiswa);

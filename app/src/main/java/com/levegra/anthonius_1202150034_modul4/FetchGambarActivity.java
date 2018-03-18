@@ -1,5 +1,7 @@
 package com.levegra.anthonius_1202150034_modul4;
 
+import android.content.pm.ActivityInfo;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +12,7 @@ import android.widget.ImageView;
 import com.jakewharton.picasso.OkHttp3Downloader;
 import com.squareup.picasso.Picasso;
 
+import java.io.Serializable;
 import java.util.Collections;
 
 import okhttp3.OkHttpClient;
@@ -20,8 +23,12 @@ public class FetchGambarActivity extends AppCompatActivity {
     EditText input;
     ImageView res_img;
     Button fetch;
+    private static final String STATE_ITEMS = "asd";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fetch_gambar);
 
@@ -41,6 +48,7 @@ public class FetchGambarActivity extends AppCompatActivity {
                         .into(res_img);
             }
         });
+
     }
 
 }
