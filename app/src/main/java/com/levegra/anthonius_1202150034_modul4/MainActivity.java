@@ -14,11 +14,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button list = (Button)findViewById(R.id.button_list);
+        Button gambar = (Button)findViewById(R.id.button_cari);
 
         list.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, AndroidListViewActivity.class);
+                Intent i = new Intent(MainActivity.this, MahasiswaActivity.class);
+                startActivity(i);
+            }
+        });
+
+        gambar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, FetchGambarActivity.class);
                 startActivity(i);
             }
         });
